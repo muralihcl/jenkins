@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'uname -a' 
+                sh 'mkdir some_directory' 
             }
         }
         stage('Test'){
             steps {
-                sh 'cat /etc/*release'
+                sh 'cp /etc/*release some_directory'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo published' 
+                sh 'ls some_directory; cat some_directory/*release' 
             }
         }
     }
