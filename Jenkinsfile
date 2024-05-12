@@ -1,4 +1,4 @@
-simpleBuild {
+readFile {
  
     env = [
         FOO : 42,
